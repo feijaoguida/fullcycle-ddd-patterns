@@ -7,6 +7,24 @@ export default class OrderItem{
     this._id = id;
     this._name = name;
     this._price = price
+    this.validate()
+  }
+
+  validate() {
+    if (this._id.length === 0 ){
+      throw new Error("Id is required")
+    }
+    if (this._name.length === 0 ){
+      throw new Error("Name is required")
+    }
+    if (this._price === 0 ){
+      throw new Error("Price is required")
+    }
+    return true
+  }
+
+  get price() {
+    return this._price
   }
 
 }
