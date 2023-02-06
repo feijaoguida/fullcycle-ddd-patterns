@@ -21,19 +21,19 @@ describe("Order unit tests", () => {
   })
 
   it("should calculate total", () => {
-    let item = new OrderItem("1", "abc", 10)
-    let item2 = new OrderItem("2", "abc", 20)
+    let item = new OrderItem("1", "abc", 10, 2, "p1")
+    let item2 = new OrderItem("2", "abc", 20, 2, "p1")
     let order = new Order("123", "123", [item, item2]);
 
     const total = order.total()
 
-    expect(total).toBe(30)
+    expect(total).toBe(60)
     
   })
 
-  it("should validate true", () => {
-    let item = new OrderItem("1", "abc", 10)
-    let item2 = new OrderItem("2", "abc", 20)
+ it("should validate true", () => {
+    let item = new OrderItem("1", "abc", 10, 2, "p1")
+    let item2 = new OrderItem("2", "abc", 20, 2, "p1")
     let order = new Order("123", "123", [item, item2]);
 
     expect(order.validate()).toBe(true)
