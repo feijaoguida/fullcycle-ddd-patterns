@@ -1,7 +1,9 @@
 {
   "dependencies": {
+    "@types/uuid": "^9.0.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-plugin-import": "^2.27.5",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.61",
